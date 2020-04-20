@@ -1,0 +1,12 @@
+npx aws-api-gateway-cli-test \
+--username='kulkarni.vikasdk@gmail.com' \
+--password='Password@12' \
+--user-pool-id='ap-southeast-1_yDCwZzOyY' \
+--app-client-id='7tick5uph5t5f5enjqibpsbaoq' \
+--cognito-region='ap-southeast-1' \
+--identity-pool-id='ap-southeast-1:cef50e70-add6-42b8-a144-9c38d433799f' \
+--invoke-url='https://xaumra67n1.execute-api.ap-southeast-1.amazonaws.com/prod' \
+--api-gateway-region='ap-southeast-1' \
+--path-template='/notes19' \
+--method='POST' \
+--body='{}'
