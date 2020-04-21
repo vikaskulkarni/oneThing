@@ -7,7 +7,6 @@
     "start": "npm run build; cd dist/ && http-server",
     "start-dev": "webpack-dev-server --inline",
     "build": "NODE_ENV=production webpack",
-    "build-dev": "webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vikas Kulkarni",
@@ -15,7 +14,6 @@
   "dependencies": {
     "async": "^2.5.0",
     "aws-amplify": "^3.0.8",
-    "aws-amplify-react": "^4.1.7",
     "babel-polyfill": "^6.26.0",
     "bad-words": "^3.0.3",
     "immutable": "^3.8.1",
@@ -45,7 +43,6 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
-    "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -56,7 +53,6 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
-    "lodash-webpack-plugin": "^0.11.5",
     "terser-webpack-plugin-legacy": "^1.2.3",
     "webpack": "^3.12.0",
     "webpack-bundle-analyzer": "^2.11.3",
