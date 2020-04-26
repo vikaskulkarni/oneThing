@@ -3,6 +3,7 @@ A site to capture peoples' emotion during COVID crisis
 
 In Development mode, just run the below command
 
+`npm install`
 `npm run start-dev`
 
 It will bring up a server running.
