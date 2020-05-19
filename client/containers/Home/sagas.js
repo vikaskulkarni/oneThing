@@ -78,7 +78,7 @@ const notes = [
 
 export function* getNoteGroups() {
   try {
-    //const notes = yield API.get("notes19", "/notes19");
+    const notes = yield API.get("notes19", "/notes19");
     yield put(getNoteGroupsSuccess(notes || []));
   } catch (e) {
     yield put(getNoteGroupsFail(groups.err));

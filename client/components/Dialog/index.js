@@ -17,8 +17,8 @@ class Dialog extends Component {
             <ModalDialog
               onClose={this.handleClose}
               style={{
-                marginLeft: "40px",
-                marginRight: "40px",
+                marginLeft: "50px",
+                marginRight: "50px",
                 background: "transparent",
                 boxShadow: "none",
               }}

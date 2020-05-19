@@ -75,7 +75,7 @@ export const Note = styled.div`
   line-height: 1;
   text-align: center;
   width: 365px;
-  margin: 10px;
+  margin: 0 10px 10px;
   min-height: 355px;
   max-height: 355px;
   padding-top: 10px;

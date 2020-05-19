@@ -3,7 +3,7 @@ import React from "react";
 const styles = {
   fixedHeader: {
     textShadow: "2px 2px 3px grey",
-    boxShadow: "20px 20px 20px 20px rgba(0,0,0,0.75)",
+    boxShadow: "rgba(0, 0, 0, 0.45) 30px 5px 20px 0px",
     color: "black",
     zIndex: 10,
     top: 0,
@@ -26,11 +26,13 @@ const styles = {
 
 const GlobalHeader = (props) => (
   <div style={styles.fixedHeader}>
-    <div>Learnings During COVID-19</div>
-    <div style={styles.total}>
-      Total Cards:{" "}
-      <span>
-        <b>{props.total}</b>
+    <div>
+      Learnings During COVID-19 -{" "}
+      <span style={styles.total}>
+        Cards:{" "}
+        <span>
+          <b>{props.total}</b>
+        </span>
       </span>
     </div>
   </div>

@@ -43,7 +43,6 @@ export class HomeContainer extends React.Component {
   }
 
   async componentWillMount() {
-    //await Auth.signIn("kulkarni.vikasdk@gmail.com", "");
     this.setState({ noUserToken: false });
     this.props.onGetNoteGroups();
     this.props.onGetIP();

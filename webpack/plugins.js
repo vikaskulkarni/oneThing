@@ -3,7 +3,6 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin-legacy");
 const isProduction = process.env.NODE_ENV === "production";
 const dist = "dist";
 const pathsToClean = [`${dist}/*.*`];
@@ -20,17 +19,10 @@ const plugins = [
     template: join("client", "index.html"),
     favicon: join("client", "favicon.ico"),
   }),
-  new webpack.optimize.CommonsChunkPlugin({
-    name: "vendor",
-    minChunks: Infinity,
-  }),
   new webpack.NamedModulesPlugin(),
 ];
 if (isProduction) {
-  plugins.push(
-    new CopyWebpackPlugin([{ from: "client/wp-i.jpg", to: "" }]),
-    new TerserPlugin()
-  );
+  plugins.push(new CopyWebpackPlugin([{ from: "client/wp-i.jpg", to: "" }]));
 } else {
   plugins.push(new webpack.HotModuleReplacementPlugin());
 }

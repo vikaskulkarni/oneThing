@@ -20,6 +20,7 @@ class Home extends Component {
         oneThingAfter: "",
         uniqueName: "",
       },
+      openFooter: false,
     };
   }
 
@@ -106,27 +107,57 @@ class Home extends Component {
     return (
       <div>
         <GlobalHeader total={groups.size} />
-        <div className="container-fluid" style={{ marginBottom: "75px" }}>
+        <div
+          className="container-fluid"
+          style={{ marginBottom: "10px", marginTop: "40px" }}
+        >
           <div className="row">
-            <div style={{ position: "fixed" }}>
-              <button
-                title="Add a Learning"
-                style={styles.btnCircle}
-                className="btn btn-primary btn-lg"
-                onClick={() => this.setState({ openAddDialog: true })}
-              >
-                <i className="fa fa-plus fa-3x"></i>
-              </button>
-              <br></br>
-              <a
-                href="https://vikas-profile.net/"
-                target="_blank"
-                style={styles.btnCircle}
-                className="btn btn-primary btn-lg"
-                title="About Me"
-              >
-                <i className="fa fa-address-card fa-3x"></i>
-              </a>
+            <div className="col-sm">
+              <div style={{ position: "fixed" }}>
+                <button
+                  title="Add a Learning"
+                  style={styles.btnCircle}
+                  className="btn btn-primary btn-lg"
+                  onClick={() => this.setState({ openAddDialog: true })}
+                >
+                  <i className="fa fa-plus fa-3x"></i>
+                </button>
+                <br></br>
+                <a
+                  href="https://vikas-profile.net/"
+                  target="_blank"
+                  style={styles.btnCircle}
+                  className="btn btn-primary btn-lg"
+                  title="About Me"
+                >
+                  <i className="fa fa-address-card fa-3x"></i>
+                </a>
+              </div>
+              <div style={{ position: "fixed", bottom: "10px" }}>
+                <button
+                  title="Add a Learning"
+                  style={styles.btnCircle}
+                  className="btn btn-primary btn-lg"
+                  onClick={() =>
+                    this.setState({ openFooter: !this.state.openFooter })
+                  }
+                >
+                  <i className="fa fa-info fa-3x"></i>
+                </button>
+                {this.state.openFooter && (
+                  <div
+                    style={{
+                      position: "fixed",
+                      bottom: "80px",
+                      left: "50px",
+                      color: "#FFF",
+                    }}
+                    onClick={() => this.setState({ openFooter: false })}
+                  >
+                    <i className="fa fa-times-circle fa-2x"></i>
+                  </div>
+                )}
+              </div>
             </div>
             <Dialog
               open={openAddDialog}
@@ -289,16 +320,18 @@ class Home extends Component {
                 </div>
               </div>
             </Dialog>
-            {
-              <StickyNotes
-                options={groups}
-                // editOption={this.editOption}
-                // deleteOption={this.props.deleteGroup}
-              />
-            }
+            <div className="col-sm">
+              {
+                <StickyNotes
+                  options={groups}
+                  // editOption={this.editOption}
+                  // deleteOption={this.props.deleteGroup}
+                />
+              }
+            </div>
           </div>
         </div>
-        <GlobalFooter />
+        {this.state.openFooter && <GlobalFooter />}
       </div>
     );
   }

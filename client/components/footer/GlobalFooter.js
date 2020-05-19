@@ -5,17 +5,17 @@ const styles = {
     color: "#FFFFFF",
     boxShadow: "2px 0px 5px 0px rgba(0, 0, 0, 0.5)",
     zIndex: 10,
-    bottom: 0,
+    bottom: 20,
     right: 0,
     overflow: "hidden",
     background: "#337ab7",
     position: "fixed",
-    margin: "0 75px",
+    margin: "0px 10px 0px 75px",
     padding: "5px 10px",
     opacity: 0.8,
     borderTopLeftRadius: "5px",
-    borderTopRightRadius: "5px"
-  }
+    borderTopRightRadius: "5px",
+  },
 };
 
 const GlobalFooter = () => (

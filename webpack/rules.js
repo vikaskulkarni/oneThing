@@ -6,6 +6,11 @@ const rules = [
     exclude: /node_modules/,
   },
   {
+    test: /\.mjs$/,
+    include: /node_modules/,
+    type: "javascript/auto",
+  },
+  {
     test: /\.(woff2|woff|ttf|eot|svg)(\?.*$|$)/,
     loader: "file-loader?name=fonts/[name].[ext]",
     include: [join(__dirname, "src"), join(__dirname, "node_modules")],
